@@ -73,7 +73,7 @@ const data= [
     },
 ];
 
-let cartList=[]; //array to store cart lists
+let cartList=[]; 
 
 var i;
 var detail =document.getElementsByClassName('card-item');
@@ -87,20 +87,20 @@ back.addEventListener('click',refreshPage)
 var addToCarts = document.querySelectorAll('#add-to-cart')
 var cart = document.getElementById('cart');
 
-// click event to display cart page
+
 cart.addEventListener('click',displayCart)
 
 var carts = document.getElementById('carts');
 
-//click events to add items to cart from details page
+
 carts.addEventListener('click',()=>addToCart(getId))
 
 var home = document.getElementById('logo');
 
-//click event to hide cart page and return to home page
+
 home.addEventListener('click',hideCart);
 
-//events on dynamically created element to remove items from list
+
 document.addEventListener('click',function (e){
     if(e.target.id=='remove'){
         var itemId = e.target.parentNode.id
@@ -109,17 +109,17 @@ document.addEventListener('click',function (e){
 })
 
 
-//click event to display details page
+
 for(i=0;i<data.length;i++){
     detail[i].addEventListener('click',handleDetail)
 }
 
 var getId;
 
-//click events to add items to cart from home page cart icon
+
 addToCarts.forEach(val=>val.addEventListener('click',()=>addToCart(val.parentNode.id)));
 
-// details function
+
 function handleDetail(e){
     detailsPage.style.display = 'block'
     getId= this.parentNode.id;
@@ -129,7 +129,7 @@ function handleDetail(e){
     youSave.innerHTML= 'You save : ($ ' + data[getId].save + ')';
 }
 
-// add item to the cart
+
 function addToCart(id) {
     if(!data[id].itemInCart){
         cartList= [...cartList,data[id]];
@@ -144,18 +144,18 @@ function addToCart(id) {
     data[id].itemInCart= true
 }
 
-//back to main page
+
 function refreshPage(){
     detailsPage.style.display = 'none'
 }
 
-// hide your cart page
+
 function hideCart(){
     document.getElementById('main').style.display= "block";
     document.getElementById('cart-container').style.display= "none";
 }
 
-//display your cart page
+
 function displayCart(){
     document.getElementById('main').style.display= "none";
     document.getElementById('details-page').style.display= "none";
@@ -175,7 +175,7 @@ var totalAmount;
 var totalItems;
 var totalSaving;
 
-//add item to the cart
+
 function addItem(){
     totalAmount=0;
     totalItems = 0;
