@@ -74,7 +74,7 @@ body{
 
 
 
-/* main section */
+
 #main{
     margin-top: 5rem;
 }
@@ -195,7 +195,7 @@ body{
     margin-top: 0.5rem;
 }
 
-/* footer */
+
 footer{
     background: rgb(18, 29, 29);
     color: white;
@@ -250,7 +250,7 @@ footer{
 }
 
 
-/* Details page */
+
 #details-page{
     background: rgba(128, 128, 128, 0.356);
     position: fixed;
@@ -403,7 +403,7 @@ footer{
     color: rgb(101, 99, 102);
 }
 
-/* media queries for responsive view */
+
 @media only screen and (min-width : 800px){
     .card{
         grid-template-columns: repeat(4,1fr);
